@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: minecraft-ingress
+spec:
+  rules:
+  - host: mc.2vcps.local
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nash-mc-minecraft 
+          servicePort: 25565
